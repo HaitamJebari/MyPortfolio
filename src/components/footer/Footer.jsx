@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 
@@ -12,27 +12,27 @@ const Footer = () => {
          className=" font-bold text-5xl sm:text-3xl">Let's Talk</h2>
         <div className=" flex items-center justify-center gap-8 sm:gap-5">
           <a 
-          data-aos="fade-up" data-aos-duration="1000"
+          data-aos="fade-up" data-aos-duration="1000" target="_blank"
 
-            href=""
+            href="https://www.linkedin.com/in/haitam-jebari-6b0280254/"
             className="box font-medium text-white   flex items-center justify-center flex-col"
           >
-            <FaTelegramPlane className=" text-black text-3xl hover:scale-125 cursor-pointer" />
-            <p>Telegram</p>
+            <FaLinkedinIn className=" text-black text-3xl hover:scale-125 cursor-pointer" />
+            <p>LinkedIn</p>
           </a>
           <a 
-          data-aos="fade-up" data-aos-duration="1200"
+          data-aos="fade-up" data-aos-duration="1200" target="_blank"
 
-            href=""
+            href="https://wa.me/212706811489"
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <IoLogoWhatsapp className=" text-black text-3xl hover:scale-125 cursor-pointer" />
             <p>WhatsApp</p>
           </a>
           <a 
-          data-aos="fade-up" data-aos-duration="1400"
+          data-aos="fade-up" data-aos-duration="1400" target="_blank"
 
-            href=""
+            href="https://www.instagram.com/haitameljebari/"
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <RiInstagramFill className=" text-black text-3xl hover:scale-125 cursor-pointer" />
@@ -40,12 +40,18 @@ const Footer = () => {
           </a>
         </div>
         <div className="sm:text-[12px]">
-          | Copyright &copy; <span>2023 Dev AlphaSpace </span> All rights reserved
+          | Copyright &copy; <span>2024 </span> All rights reserved
           <a href="#"></a> |
         </div>
+        
       </div>
     </div>
+    
   );
 };
 
 export default Footer;
+
+
+
+
