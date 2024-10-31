@@ -18,11 +18,11 @@ export const data = [
   },
   {
     id: 3,
-    img: 'https://i.postimg.cc/wBjcJcW7/5890625.jpg',
-    title: "Music Player",
+    img: 'https://i.postimg.cc/pXWvGZty/Capture-d-cran-2024-10-30-231255.png',
+    title: "Organization Management",
     desc: "",
     link: "",
-    git: "",
+    git: "https://github.com/HaitamJebari/Gestion_d-organisation",
   }
   
 ];

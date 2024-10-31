@@ -4,10 +4,18 @@ import { data } from "../data/data";
 import { RxExternalLink } from "react-icons/rx";
 import { AiOutlineGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import GalleryModal from "./GalleryModal";
 
 const WorkCard = () => {
   const reversedData = [...data].reverse();
-
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  const images = [
+    // Add your image URLs here
+    "https://i.postimg.cc/J40XwjN4/Capture-d-cran-2024-10-30-231316.png",
+    "https://i.postimg.cc/nLb9Q56C/Capture-d-cran-2024-10-30-232711.png",
+    "https://i.postimg.cc/2y61DfBX/Capture-d-cran-2024-10-30-232735.png"
+    // Add more as needed
+  ];
   return (
     <>
       {reversedData.map((data) => {
@@ -33,14 +41,28 @@ const WorkCard = () => {
                   {data.desc}
                 </p>
                 <div className=" flex items-center justify-center gap-4">
-                  <Link
-                    to={data.link}
-                    target="_blank"
-                    className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
-                  >
-                    <RxExternalLink className=" text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
-                    <p className=" text-black">Demo</p>
-                  </Link>
+
+
+
+
+
+                   <Link
+                      onClick={(e) => {
+                        e.preventDefault(); // Prevent default link behavior
+                        setIsGalleryOpen(true); // Open the gallery
+                      }}
+                      to="#"
+                      className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                    >
+                      <RxExternalLink className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
+                      <p className="text-black">Data</p>
+                    </Link>
+                    <GalleryModal images={images} isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} />
+
+
+
+
+
                   <br className="w-[2px] bg-white" />
                   <Link
                     to={data.git}
