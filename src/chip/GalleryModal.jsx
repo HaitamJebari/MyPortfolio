@@ -29,6 +29,7 @@ const GalleryModal = ({ images, isOpen, onClose }) => {
           overflowY:"scroll"
         }}
       >
+
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -36,6 +37,7 @@ const GalleryModal = ({ images, isOpen, onClose }) => {
         >
           X
         </button>
+
 
         {/* Display current image */}
         <div className="flex items-center justify-center mt-6">

@@ -11,6 +11,7 @@ export const data = [
       "https://i.postimg.cc/nLb9Q56C/image1-2.png",
       "https://i.postimg.cc/2y61DfBX/image1-3.png"
     ],
+    title2:"Reactjs And Strapi",
     git: "https://github.com/HaitamJebari/Gestion_d-organisation"
   },
   {
