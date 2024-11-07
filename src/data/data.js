@@ -49,7 +49,7 @@ export const data = [
       "https://i.postimg.cc/cLV0zRRb/Capture-d-cran-2024-11-07-175133.png"
       
          ],
-    git: "https://github.com/HaitamJebari/CafeManagement"
+    git: "https://github.com/HaitamJebari/FlightReservation"
   }
   // {
   //   id: 3,
