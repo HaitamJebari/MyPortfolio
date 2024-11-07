@@ -4,7 +4,7 @@ import { data } from "../data/data";
 import { RxExternalLink } from "react-icons/rx";
 import { AiOutlineGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import GalleryModal from "./GalleryModal";
+import GalleryModal from "../chip/GalleryModal";
 
 const WorkCard = () => {
   const OrderedData = [...data];

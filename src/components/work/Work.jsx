@@ -1,5 +1,5 @@
 import React from "react";
-import WorkCard from "../../chip/WorkCard";
+import WorkCard from "../../assets/WorkCard";
 
 const Work = () => {
   return (

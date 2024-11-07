@@ -30,6 +30,27 @@ export const data = [
          ],
     git: "https://github.com/HaitamJebari/CafeManagement"
   },
+  
+  {
+    id: 3,
+    img: "https://i.postimg.cc/pLV28V2s/Capture-d-cran-2024-11-07-174754.png",
+    title: "Flight Reservation",
+    desc: "Description for Flight Reservation",
+    link: "",
+    images: [
+      "https://i.postimg.cc/pLV28V2s/Capture-d-cran-2024-11-07-174754.png",
+      "https://i.postimg.cc/FHhjLSdw/Capture-d-cran-2024-11-07-174819.png",
+      "https://i.postimg.cc/vmN9kSqd/Capture-d-cran-2024-11-07-174851.png",
+      "https://i.postimg.cc/mD1MsNJ1/Capture-d-cran-2024-11-07-174910.png",
+      "https://i.postimg.cc/0jgS2K1W/Capture-d-cran-2024-11-07-174943.png",
+      "https://i.postimg.cc/SRyyrm6Q/Capture-d-cran-2024-11-07-175014.png",
+      "https://i.postimg.cc/zXGzHXD0/Capture-d-cran-2024-11-07-175040.png",
+      "https://i.postimg.cc/RZ3vGsHt/Capture-d-cran-2024-11-07-175109.png",
+      "https://i.postimg.cc/cLV0zRRb/Capture-d-cran-2024-11-07-175133.png"
+      
+         ],
+    git: "https://github.com/HaitamJebari/CafeManagement"
+  }
   // {
   //   id: 3,
   //   img: "https://i.postimg.cc/138tg5RD/Capture-d-cran-2024-11-07-160111.png",
