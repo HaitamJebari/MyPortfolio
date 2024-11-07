@@ -38,7 +38,7 @@ const Resume = () => {
                   FullStack Developer
                 </h1>
                 <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
-                  Digital Place
+                  Digital Place - Stage
                 </span>
                 <span className=" text-[.9rem] font-semibold text-yellow-500 sm:text-base">
                   01 May 2023 - 30 June 2023
@@ -66,7 +66,7 @@ const Resume = () => {
                   Wordpress Developer and Aws Cloud
                 </h1>
                 <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
-                  YourAws
+                  YourAws - Stage
                 </span>
                 <span className=" text-[.9rem] font-semibold text-yellow-500 sm:text-base">
                   04 December 2023 - 30 January 2024
@@ -83,17 +83,33 @@ const Resume = () => {
               </div>
               
             </div>
-          </fieldset>
-        </div>
-
-        <div className="right flex-1 flex items-center justify-center">
-          <fieldset
-            data-aos="zoom-in"
-            className=" w-[80%] p-5 py-12 sm:py-8 sm:w-full sm:p-2"
-          >
-            <legend className=" w-auto ml-[50%] translate-x-[-50%] translate-y-[20%] border-2 border-gray-200 rounded-3xl py-1 px-8 font-semibold text-xl text-yellow-500">
+            <legend className=" w-auto ml-[60%] translate-x-[-75%] translate-y-[90%] border-2 border-gray-200 rounded-3xl py-1 px-8 font-semibold text-xl text-yellow-500">
               Education
             </legend>
+            <div className=" relative">
+              {/* design */}
+              <div className="design flex absolute  left-[-150px] top-1/2 items-center rotate-[90deg] sm:left-[-160px] ">
+                <div className="c1 w-[12px] h-[12px] rounded-full bg-white border-2 border-yellow-500"></div>
+                <div className="line w-[230px] bg-gray-300 h-[2px] sm:w-[250px]"></div>
+                <div className="c2 w-[12px] h-[12px] rounded-full bg-white border-2 border-yellow-500"></div>
+              </div>
+              {/* design */}
+              <div className=" flex flex-col mt-20 gap-1 border-2 border-yellow-400 shadow-[0px_0px_16px_1px_rgba(0,0,0,0.1)] p-3 rounded-lg">
+                <h1 className="text-[1.4rem] font-semibold sm:text-xl">
+                  European Bachelor / Professional License - FEDE
+                </h1>
+                <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
+                  Ciel Institut 
+                </span>
+                <span className=" text-[.9rem] font-semibold text-yellow-500 sm:text-base">
+                  October 2024 - Now
+                </span>
+                <p className=" text-[.9rem] text-justify text-gray-500">
+                  Mobile application development 
+                </p>
+              </div>
+            </div>
+            <br/><br/><br/>
             <div className=" relative">
               {/* design */}
               <div className="design flex absolute left-[-150px] top-1/2 items-center rotate-[90deg] sm:left-[-160px] ">
@@ -120,9 +136,48 @@ const Resume = () => {
                 </p>
               </div>
             </div>
+          </fieldset>
+
+
+
+
+        </div>
+
+        <div className="right flex-1 flex items-center justify-center">
+          <fieldset
+            data-aos="zoom-in"
+            className=" w-[80%] p-5 py-12 sm:py-8 sm:w-full sm:p-2"
+          >
+            
             <legend className=" w-auto ml-[58%] translate-x-[-70%] translate-y-[100%] border-2 border-gray-200 rounded-3xl py-1 px-8 font-semibold text-xl text-yellow-500">
               Formation
             </legend>
+            <div className=" relative">
+              {/* design */}
+              <div className="design flex absolute left-[-185px] top-1/2 items-center rotate-[90deg] sm:left-[-160px] ">
+                <div className="c1 w-[12px] h-[12px] rounded-full bg-white border-2 border-yellow-500"></div>
+                <div className="line w-[300px] bg-gray-300 h-[2px] sm:w-[250px]"></div>
+                <div className="c2 w-[12px] h-[12px] rounded-full bg-white border-2 border-yellow-500"></div>
+              </div>
+              {/* design */}
+              <div className=" flex flex-col mt-10 gap-1 sm:gap-1 border-2 border-yellow-400 shadow-[0px_0px_16px_1px_rgba(0,0,0,0.1)] p-3 rounded-lg">
+                <h1 className="text-[1.4rem] font-semibold sm:text-xl">
+                   Certificate EF SET (English Language)
+                </h1>
+                <span className=" text-[.9rem] font-semibold text-gray-500 sm:text-base">
+                   on the platform EF SET 
+                </span>
+                <span className=" text-[.9rem] font-semibold text-yellow-500 sm:text-base">
+                  06 November 2024
+                </span>
+                <p className=" text-[.9rem] text-justify break-words text-gray-500">
+                The achieved level is 55/100 on the EF SET score scale and B2 Upper Intermediate according to the
+                Common European Framework of Reference (CEFR). The EF SET score is calculated as an average of the
+                skill section scores.
+                </p>
+              </div>
+              
+            </div>
             <div className=" relative">
               {/* design */}
               <div className="design flex absolute left-[-185px] top-1/2 items-center rotate-[90deg] sm:left-[-160px] ">
