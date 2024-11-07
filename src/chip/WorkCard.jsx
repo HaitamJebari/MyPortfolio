@@ -7,81 +7,74 @@ import { Link } from "react-router-dom";
 import GalleryModal from "./GalleryModal";
 
 const WorkCard = () => {
-  const reversedData = [...data].reverse();
+  const OrderedData = [...data];
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
-  const images = [
-    // Add your image URLs here
-    "https://i.postimg.cc/J40XwjN4/Capture-d-cran-2024-10-30-231316.png",
-    "https://i.postimg.cc/nLb9Q56C/Capture-d-cran-2024-10-30-232711.png",
-    "https://i.postimg.cc/2y61DfBX/Capture-d-cran-2024-10-30-232735.png"
-    // Add more as needed
-  ];
+  const [galleryImages, setGalleryImages] = useState([]);
+
+  const openGallery = (images) => {
+    setGalleryImages(images);
+    setIsGalleryOpen(true);
+  };
+
   return (
-    <>
-      {reversedData.map((data) => {
-        return (
-          <div
-            data-aos="zoom-in"
-            key={data.id}
-            className="flex flex-col justify-center items-center gap-4"
-          >
-            <POPUP className="img-content relative">
-              <div className="h-[280px] w-[380px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto ">
-                <img
-                  src={data.img}
-                  alt={data.title}
-                  className=" object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
-                />
+    <div 
+    className="flex justify-center"
+    style={{ marginLeft : "34em" }}
+    > {/* Container to center the items */}
+      {OrderedData.map((data, index) => (
+        <div
+          data-aos="zoom-in"
+          key={data.id}
+          className={`flex flex-col justify-center items-center gap-4 ${
+            index < OrderedData.length - 1 ?  "mr-8" : "" 
+          }`} // Add margin-right to all except the last item
+        >
+          <POPUP className="img-content relative">
+            <div 
+              className="h-[280px] w-[380px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto"
+            >
+              <img
+                src={data.img}
+                alt={data.title}
+                className="object-fit w-full h-full hover:scale-125 transition duration-500 cursor-pointer"
+              />
+            </div>
+
+            <div className="popup w-full h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4">
+              <p className="text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
+                {data.desc}
+              </p>
+              <div className="flex items-center justify-center gap-4">
+                <Link
+                  onClick={(e) => {
+                    e.preventDefault();
+                    openGallery(data.images);
+                  }}
+                  to="#"
+                  className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                >
+                  <RxExternalLink className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
+                  <p className="text-black">Data</p>
+                </Link>
+
+                <Link
+                  to={data.git}
+                  target="_blank"
+                  className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                >
+                  <AiOutlineGithub className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
+                  <p className="text-black">Code</p>
+                </Link>
               </div>
-
-              <div
-                className={` popup w-full  h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
-              >
-                <p className=" text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
-                  {data.desc}
-                </p>
-                <div className=" flex items-center justify-center gap-4">
-
-
-
-
-
-                   <Link
-                      onClick={(e) => {
-                        e.preventDefault(); // Prevent default link behavior
-                        setIsGalleryOpen(true); // Open the gallery
-                      }}
-                      to="#"
-                      className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
-                    >
-                      <RxExternalLink className="text-black bg-white rounded-full border w-[35px] h-[35px] p-2" />
-                      <p className="text-black">Data</p>
-                    </Link>
-                    <GalleryModal images={images} isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} />
-
-
-
-
-
-                  <br className="w-[2px] bg-white" />
-                  <Link
-                    to={data.git}
-                    target="_blank"
-                    className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
-                  >
-                    <AiOutlineGithub className="  text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
-                    <p className=" text-black">Code</p>
-                  </Link>
-                </div>
-              </div>
-            </POPUP>
-            <p className="text-gray-800 text-xl font-medium sm:text-lg">
-              {data.title}
-            </p>
-          </div>
-        );
-      })}
-    </>
+            </div>
+          </POPUP>
+          <p className="text-gray-800 text-xl font-medium sm:text-lg">
+            {data.title}
+          </p>
+        </div>
+      ))}
+      <GalleryModal images={galleryImages} isOpen={isGalleryOpen} onClose={() => setIsGalleryOpen(false)} />
+    </div>
   );
 };
 
@@ -94,6 +87,7 @@ const POPUP = styled.div`
       transform: scaleX(2);
     }
   }
+   
   .popup {
     position: absolute;
     top: 0;
@@ -110,11 +104,7 @@ const POPUP = styled.div`
     justify-content: center;
     flex-direction: column;
   }
-  .icon {
-    color: #fff !important;
-  }
   &:hover .popup {
     opacity: 1;
-    color: #fff;
   }
 `;
