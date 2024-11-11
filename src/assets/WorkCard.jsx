@@ -19,19 +19,20 @@ const WorkCard = () => {
   return (
     <div 
     className="flex justify-center"
-    style={{ marginLeft : "34em" }}
+    style={{ marginLeft : "40em" }}
     > {/* Container to center the items */}
       {OrderedData.map((data, index) => (
         <div
           data-aos="zoom-in"
           key={data.id}
-          className={`flex flex-col justify-center items-center gap-4 ${
+          className={`flex flex-col justify-center items-center gap-7 ${
             index < OrderedData.length - 1 ?  "mr-8" : "" 
           }`} // Add margin-right to all except the last item
         >
           <POPUP className="img-content relative">
-            <div 
-              className="h-[280px] w-[380px] hover:scale-125 transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto"
+            <div  
+              className="h-[280px] w-[390px] hover:scale-125  transition duration-500 cursor-pointer shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] sm:bg-cover mx-auto"
+             
             >
               <img
                 src={data.img}

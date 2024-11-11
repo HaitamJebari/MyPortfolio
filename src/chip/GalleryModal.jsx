@@ -19,12 +19,15 @@ const GalleryModal = ({ images, isOpen, onClose }) => {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    style={{ overflowY : "scroll" }}
+    >
       <div
         className="bg-white rounded-lg p-4 shadow-lg relative"
         style={{
-          width: "80%", // Width of the gallery modal
-          maxWidth: "600px", // Max width for large screens
+          width: "100%", // Width of the gallery modal
+          maxWidth: "80em",
+          maxHeight:"50em", // Max width for large screens
           textAlign: "center",
           overflowY:"scroll"
         }}
